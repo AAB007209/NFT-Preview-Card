@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --veryDarkBlueMain: hsl(217, 54%, 11%);
+    --VerydarkblueCard: hsl(216, 50%, 16%);
+    --VerydarkblueLine: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    height: 100vh;
+    font-family: "Outfit", serif;
+    background-color: var(--veryDarkBlueMain);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-container {
+    border-radius: 12px;
+    width: 320px;
+    background-color: var(--VerydarkblueCard);
+    padding: 24px;
+    box-shadow: 16px 12px 12px rgba(0, 0, 0, 0.3),
+        -16px 12px 12px rgba(0, 0, 0, 0.3),
+        0px 12px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card-details-1 h2 {
+    color: var(--White);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.card-details-1 p {
+    color: var(--softBlue);
+    opacity: 60%;
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.card-details-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--VerydarkblueLine);
+    padding-bottom: 1.5rem;
+}
+
+.eth,
+.days {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.eth h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--cyan);
+}
+
+.days h4 {
+    font-weight: 400;
+    color: var(--softBlue);
+    opacity: 70%;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.author h4 {
+    color: var(--White);
+    font-weight: 300;
+}
+
+.author h4 span {
+    color: var(--softBlue);
+    opacity: 70%;
+}
+
+.author .profile-pic {
+    width: 30px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.footer {
+    color: var(--White);
+    opacity: 70%;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--cyan);
+}
+
+.footer-content {
+    background-color: var(--VerydarkblueCard);
+    padding: 24px;
+    border-radius: 12px;
+    border: 2px dotted var(--cyan);
+}
+
+.footer-content a:hover {
+    color: var(--softBlue);
+}
+
+@media (min-width: 765px) {
+    .footer {
+        width: 60%;
+    }
+
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
