@@ -35,16 +35,59 @@ body {
         0px 12px 12px rgba(0, 0, 0, 0.3);
 }
 
-.card-image img {
+.card-container .card-link {
+    position: relative;
+    display: flex;
     width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
 
+.card-container .card-link .card-picture {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card-container .card-link::before {
+    content: '';
+    background-color: var(--cyan);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card-container .card-link::after {
+    content: '';
+    background: url(../images/icon-view.svg) no-repeat center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card-container .card-link:hover::before {
+    opacity: 0.5;
+}
+
+.card-container .card-link:hover::after {
+    opacity: 1;
+    cursor: pointer;
+}
+
 .card-details-1 h2 {
+    font-size: 20px;
     color: var(--White);
     font-weight: 400;
     margin-bottom: 1rem;
+}
+
+.card-details-1 h2:hover {
+    cursor: pointer;
+    color: var(--cyan);
 }
 
 .card-details-1 p {
@@ -61,6 +104,7 @@ body {
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--VerydarkblueLine);
     padding-bottom: 1.5rem;
+    font-size: 14px;
 }
 
 .eth,
@@ -72,7 +116,6 @@ body {
 }
 
 .eth h4 {
-    font-size: 16px;
     font-weight: 400;
     color: var(--cyan);
 }
@@ -91,13 +134,19 @@ body {
 }
 
 .author h4 {
-    color: var(--White);
-    font-weight: 300;
+    font-size: 14px;
+    color: var(--softBlue);
+    font-weight: 400;
+    opacity: 70%;
 }
 
 .author h4 span {
-    color: var(--softBlue);
-    opacity: 70%;
+    color: var(--White);
+}
+
+.author h4 span:hover {
+    cursor: pointer;
+    color: var(--cyan);
 }
 
 .author .profile-pic {
